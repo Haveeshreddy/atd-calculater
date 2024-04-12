@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATD DEF Savings Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="Logo.png" alt="Company Logo" class="company-logo">
+        <h2>ATD DEF Savings Calculator</h2>
+
+        <div id="inputFields">
+            <div class="input-group">
+                <label for="companyNameInput">Enter the company Name</label>
+                <input type="text" id="companyNameInput" value="">
+            </div>
+
+            <div class="input-group">
+                <label for="personNameInput">Enter the person Name</label>
+                <input type="text" id="personNameInput" value="">
+            </div>
+
+            <div class="input-group">
+                <label for="avgConsumption">Enter the average monthly consumption (Liters)</label>
+                <input type="number" id="avgConsumption" value="">
+            </div>
+
+            <div class="input-group">
+                <label for="currentPrice">Current DEF purchase Price Per Liter (₹)</label>
+                <input type="number" id="currentPrice" value="">
+            </div>
+
+            <div class="input-group">
+                <label for="atdPrice">Price of ATD Blue Per Liter (₹)</label>
+                <input type="number" id="atdPrice" value="">
+            </div>
+
+            <div class="input-group">
+                <label for="gstRate">GST for ATD BLUE (%)</label>
+                <input type="number" id="gstRate" value="18">
+            </div>
+        </div>
+
+        <!-- Calculate Savings button -->
+        <button id="calculateBtn">Calculate Savings</button>
+
+        <!-- Result section (Initially hidden) -->
+        <div id="result" style="display: none;">
+            <h3>Savings With ATD BLUE on average consumption</h3>
+            <p>Company Name: <span id="companyName"></span></p> <!-- Placeholder for company name -->
+            <p>Person Name: <span id="personName"></span></p> <!-- Placeholder for person name -->
+            <p id="monthlySavingsText">Monthly Savings: <span id="monthlySavings">₹ </span></p>
+            <p id="yearlySavingsText">Yearly Savings: <span id="yearlySavings">₹ </span></p>
+            <br>
+            <p>Total Monthly Savings with Tax Benefits: <span id="totalMonthlySavings">₹ </span><span id="monthlyExcludingTax"></span></p>
+            <p>Total Yearly Savings with Tax Benefits: <span id="totalYearlySavings">₹ </span><span id="yearlyExcludingTax"></span></p>
+            <button id="backBtn">Back</button>
+        </div>
+        
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
